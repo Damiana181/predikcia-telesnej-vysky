@@ -1,0 +1,55 @@
+* {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background: black;
+}
+select {
+    font-size: 25px;
+    background: black;
+    border: 3px solid red;
+    border-radius: 25px;
+    padding: 10px;
+}
+select:hover {
+    cursor: pointer;
+}
+input {
+    background: black;
+}
+.hidden {
+    display: none;
+}
+button {
+    background: black;
+    border: 3px solid red;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 25px;
+    font-size: 25px;
+    font-weight: 1000;
+}
+button:hover {
+    background: white;
+    color: black;
+    transition: .5s;
+    cursor: pointer;
+}
+section {
+    text-align: center;
+}
+section h1 {
+    font-size: 40px;
+
+}
+div * {
+    font-size: 20px;
+    text-align: center;
+}
+#actual-models, #modified-models {
+    margin-left: 35%;
+}
+input {
+    margin: 10px;
+}

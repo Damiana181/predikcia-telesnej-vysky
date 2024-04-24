@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Výpočet vzorcov</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="calculator.js"></script>
+</head>
+<body>
+  <section>
+    <h1>Výpočet vzorcov</h1>
+    <label for="modelSelect">Vyberte model:</label>
+    <select id="modelSelect" onchange="showFormula()">
+      <option value="none">--- Vyberte model ---</option>
+      <option value="actual">Aktuálne modely</option>
+      <option value="modified">Upravené matematické modely</option>
+    </select>
+    <div id="inputs" class="hidden">
+    <p>Zvolte parametre:</p>
+    <span>dso = </span>
+    <input type="number" id="dso" placeholder="">
+    <span>šso = </span>
+    <input type="number" id="sso" placeholder="">
+    <span>dk = </span>
+    <input type="number" id="dk" placeholder="">
+    <span>ddk = </span>
+    <input type="number" id="ddk" placeholder="">
+    <br>
+    <button onclick="calc()">Vypočítať</button>
+    <br>
+    </div>
+  </section>
+
+<div id="actual-models" class="hidden">
+  <input type="number" id="a-1" disabled>
+  <span> = 2,6 * dso + 4,3 * šso + 56</span>
+  <br>
+  <input type="number" id="a-2" disabled>
+  <span> = 3,1 * dso + 4,0 * šso + 45</span>
+  <br>
+  <input type="number" id="a-3" disabled>
+  <span> = 0,297 * dk + 153</span>
+  <br>
+  <input type="number" id="a-4" disabled>
+  <span> = 0,315 * dk + 163</span>
+  <br>
+  <input type="number" id="a-5" disabled>
+  <span> = 0,157 * ddk + 151</span>
+  <br>
+  <input type="number" id="a-6" disabled>
+  <span> = 0,175 * ddk + 155</span>
+  <br>
+  <input type="number" id="a-7" disabled>
+  <span> = 0,153 * dk + 0,083 * ddk + 155,5</span>
+  <br>
+  <input type="number" id="a-8" disabled>
+  <span> = 0,076 * dk + 0,041 * ddk + 1,35 * dso + 2,4 * šso + 101,25</span>
+  <br>
+  <input type="number" id="a-9" disabled>
+  <span> = 118,996 + 0,740652 * dk</span>
+  <br>
+</div>
+<div id="modified-models" class="hidden">
+  <input type="number" id="m-1" disabled>
+  <span> = 2,815 * dso + 4,52 * šso + 50</span>
+  <br>
+  <input type="number" id="m-2" disabled>
+  <span> = 2,88 * dso  +  3,8692 * šso  + 56</span>
+  <br>
+  <input type="number" id="m-3" disabled>
+  <span> = 3 * dso + 4 * šso + 48,9</span>
+  <br>
+  <input type="number" id="m-4" disabled>
+  <span> = 3,0425 * dso + 4,53 * šso + 45</span>
+  <br>
+  <input type="number" id="m-5" disabled>
+  <span> = 0,001 * dk + 0,159 * ddk + 153</span>
+  <br>
+  <input type="number" id="m-6" disabled>
+  <span> = 153 + 0,319 * dk</span>
+  <br>
+  <input type="number" id="m-7" disabled>
+  <span> = 2,3 * dso + 4,6 * šso + 62,24</span>
+  <br>
+  <input type="number" id="m-8" disabled>
+  <span> = 3,2 * dso + 2,86 * šso + 54</span>
+  <br>
+  <input type="number" id="m-9" disabled>
+  <span> = 2,86 * dso + 4,2769 * šso + 48,5</span>
+  <br>
+  <input type="number" id="m-10" disabled>
+  <span> = 2,86 * dso + 4,24 * šso + 49,75</span>
+  <br>
+</div>
+<br><br>
+<div id="formulaOutput"></div>
+</body>
+</html>
